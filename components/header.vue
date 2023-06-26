@@ -2,6 +2,7 @@
 	<div>
 		<header class="header">
 			<div class="container">
+				<Logo />
 				<nav class="header__nav">
 					<ul>
 						<li>
@@ -21,6 +22,11 @@
 	.header {
 		background-color: #111555;
 		color: #fff;
+	}
+	.header .container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 	.header__nav ul {
 		list-style: none;
