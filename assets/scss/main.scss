@@ -1,8 +1,11 @@
 @import "bulma/bulma.sass";
 
+@import 'vars';
+
 body {
 	margin: 0;
-	background-color: #98f6eb;
+	background-color: $green;
+	color: $black;
 }
 
 #__nuxt>div {
@@ -37,3 +40,5 @@ body {
 		max-width: 1100px;
 	}
 }
+
+@import 'text';

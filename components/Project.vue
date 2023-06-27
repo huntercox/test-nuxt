@@ -1,14 +1,7 @@
 <template>
-	<div class="project" :class="`project--${project.projectId}`">
-		<div class="container">
-			<h1>Projects</h1>
-			<ul>
-				<li :class="project.projectId" :key="project.uri">
-					<nuxt-link :to="project.uri">{{ project.title }}</nuxt-link>
-				</li>
-			</ul>
-		</div>
-	</div>
+	<li class="project" :class="project.projectId" :key="project.uri">
+		<nuxt-link :to="project.uri">{{ project.title }}</nuxt-link>
+	</li>
 </template>
 <script setup lang="ts">
 const props = defineProps<{
@@ -16,3 +9,11 @@ const props = defineProps<{
 }>();
 
 </script>
+<style scoped lang="scss">
+.project {
+	text-align: center;
+	padding: 20px;
+	background-color: #111555;
+	color: #fff;
+}
+</style>

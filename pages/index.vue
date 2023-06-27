@@ -9,8 +9,11 @@
 				commodi?</p>
 
 			<!-- <pre>{{ data }}</pre>> -->
-			<div class="projects">
-				<Project v-for="project in data" :key="project.uri" :project="project" />
+			<div class="projects__wrap">
+				<h2>My Projects:</h2>
+				<ul class="projects">
+					<Project v-for="project in data" :key="project.uri" :project="project" />
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -38,3 +41,13 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
 	}
 });
 </script>
+
+<style scoped lang="scss">
+.projects {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 20px 0;
+	list-style-type: none;
+}
+</style>
