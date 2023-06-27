@@ -1,13 +1,11 @@
 <template>
-	<div>
-		<footer class="footer">
-			<div class="container">
-				<p class="footer__link">
-					<NuxtLink to="/">Home</NuxtLink>
-				</p>
-			</div>
-		</footer>
-	</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="footer__link">
+				<NuxtLink to="/">Home</NuxtLink>
+			</p>
+		</div>
+	</footer>
 </template>
 
 <style scoped>

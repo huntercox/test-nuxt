@@ -4,8 +4,9 @@ body {
 }
 
 #__nuxt>div {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 72px auto 28px;
 	min-height: 100vh;
 }
 

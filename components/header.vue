@@ -1,27 +1,27 @@
 <template>
-	<div>
-		<header class="header">
-			<div class="container">
-				<Logo />
-				<nav class="header__nav">
-					<ul>
-						<li>
-							<NuxtLink to="/">Home</NuxtLink>
-						</li>
-						<li>
-							<NuxtLink to="/about">About</NuxtLink>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-	</div>
+	<header class="header bg-emerald-400">
+		<div class="container">
+			<Logo />
+			<nav class="header__nav">
+				<ul>
+					<li>
+						<NuxtLink to="/">Home</NuxtLink>
+					</li>
+					<li>
+						<NuxtLink to="/about">About</NuxtLink>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 </template>
 
 <style scoped>
 	.header {
 		background-color: #111555;
 		color: #fff;
+		border: 2px solid #444;
+		overflow: hidden;
 	}
 	.header .container {
 		display: flex;
