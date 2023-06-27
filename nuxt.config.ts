@@ -5,4 +5,12 @@ export default defineNuxtConfig({
 		// '@/assets/css/main.css',
 		'@/assets/scss/main.scss'
 	],
+	modules: [
+		'@nuxt/devtools',
+	],
+	runtimeConfig: {
+		public: {
+			wordpressUrl: 'http://plugin-testing.local/graphql'
+		}
+	}
 })
