@@ -1,1 +1,39 @@
 @import "bulma/bulma.sass";
+
+body {
+	margin: 0;
+	background-color: #98f6eb;
+}
+
+#__nuxt>div {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 72px auto 28px;
+	min-height: 100vh;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: none;
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 760px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1100px;
+	}
+}
