@@ -32,12 +32,16 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
 					title
 					uri
 					projectId
+					projectDescription
+					projectUrl
+					projectDate
+					projectEmployer
 				}
 			}
      }`
 	},
 	transform(data) {
-		return data.data.projects.nodes as Array<Record<'title' | 'uri' | 'projectId', string>>;
+		return data.data.projects.nodes as Array<Record<'title' | 'uri' | 'projectId' | 'projectDescription' | 'projectUrl' | 'projectDate' | 'projectEmployer', string>>;
 	}
 });
 </script>
@@ -46,8 +50,12 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
 .projects {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
+	align-items: start;
 	margin: 20px 0;
 	list-style-type: none;
+
+	.project {
+		width: 33%;
+	}
 }
 </style>
