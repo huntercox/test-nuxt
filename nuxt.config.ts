@@ -7,10 +7,11 @@ export default defineNuxtConfig({
 	],
 	modules: [
 		'@nuxt/devtools',
+		'nuxt-graphql-client'
 	],
 	runtimeConfig: {
 		public: {
-			wordpressUrl: 'http://plugin-testing.local/graphql'
+			GQL_HOST: process.env.GQL_HOST,
 		}
 	}
 })

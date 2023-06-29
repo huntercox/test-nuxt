@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="page">
 		<div class="container">
 			<h1>Projects</h1>
 
@@ -22,7 +22,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const config = useRuntimeConfig();
-const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
+const { data, refresh, pending } = await useFetch(process.env.GQL_HOST, {
 	method: 'get',
 	query: {
 		query: `
@@ -40,7 +40,7 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
 			}
      }`
 	},
-	transform(data) {
+	transform(data: any) {
 		return data.data.projects.nodes as Array<Record<'title' | 'uri' | 'projectId' | 'projectDescription' | 'projectUrl' | 'projectDate' | 'projectEmployer', string>>;
 	}
 });

@@ -1,0 +1,9 @@
+query Projects($status: ProjectStatus = PUBLISHED) {
+	projects(status: $status) {
+		nodes {
+			title
+			uri
+			projectId
+		}
+	}
+}
