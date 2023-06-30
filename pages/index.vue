@@ -7,22 +7,8 @@
 				labore, modi praesentium non fugiat asperiores ut dolore. Fugit voluptatibus voluptates, molestias labore
 				voluptate et
 				commodi?</p>
-			<pre>{{ projects }}</pre>
 		</div>
 	</div>
 </template>
 
-<script setup lang="ts">
-const route = useRoute()
-const { data } = await useAsyncGql({
-	operation: 'Projects',
-})
-let projects = data;
-</script>
-
-<style scoped lang="scss">
-.container {
-	max-width: 800px;
-	margin: 0 auto;
-}
-</style>
+<style scoped lang="scss"></style>

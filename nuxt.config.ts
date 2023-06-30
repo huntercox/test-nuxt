@@ -7,7 +7,8 @@ export default defineNuxtConfig({
 	],
 	modules: [
 		'@nuxt/devtools',
-		'nuxt-graphql-client'
+		'nuxt-graphql-client',
+		'@nuxtjs/apollo',
 	],
 	runtimeConfig: {
 		public: {
