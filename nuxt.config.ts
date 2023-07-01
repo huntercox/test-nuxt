@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: [
@@ -6,19 +8,14 @@ export default defineNuxtConfig({
 	],
 	modules: [
 		'@nuxt/devtools',
-		'@nuxtjs/apollo',
+		'@nuxtjs/apollo'
 	],
 	apollo: {
-		autoImports: true,
-		authType: 'Bearer',
-		authHeader: 'Authorization',
-		tokenStorage: 'cookie',
-		proxyCookies: true,
 		clients: {
 			default: {
 				httpEndpoint: 'http://huntercoxdev.local/graphql'
 			}
-		}
+		},
 	},
 	runtimeConfig: {
 		public: {

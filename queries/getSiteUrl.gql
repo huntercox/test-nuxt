@@ -1,5 +1,0 @@
-query getSiteUrl() {
-  generalSettings {
-    url
-  }
-}
