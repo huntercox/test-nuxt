@@ -2,17 +2,27 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: [
-		// '@/assets/css/main.css',
 		'@/assets/scss/main.scss'
 	],
 	modules: [
 		'@nuxt/devtools',
-		'nuxt-graphql-client',
 		'@nuxtjs/apollo',
 	],
+	apollo: {
+		autoImports: true,
+		authType: 'Bearer',
+		authHeader: 'Authorization',
+		tokenStorage: 'cookie',
+		proxyCookies: true,
+		clients: {
+			default: {
+				httpEndpoint: 'http://huntercoxdev.local/graphql'
+			}
+		}
+	},
 	runtimeConfig: {
 		public: {
 			GQL_HOST: process.env.GQL_HOST,
 		}
-	}
+	},
 })
